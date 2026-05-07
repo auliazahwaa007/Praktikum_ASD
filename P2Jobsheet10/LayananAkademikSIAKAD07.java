@@ -5,9 +5,7 @@ import java.util.Scanner;
 public class LayananAkademikSIAKAD07 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         AntrianLayanan07 antrian = new AntrianLayanan07(5);
-
         int pilihan;
 
         do {
@@ -17,9 +15,9 @@ public class LayananAkademikSIAKAD07 {
             System.out.println("3. Lihat Mahasiswa Terdepan");
             System.out.println("4. Lihat Semua Antrian");
             System.out.println("5. Jumlah Mahasiswa dalam Antrian");
+            System.out.println("6. Cek Antrian Paling Belakang");
             System.out.println("0. Keluar");
             System.out.print("Pilih menu: ");
-
             pilihan = sc.nextInt();
             sc.nextLine();
 
@@ -27,24 +25,19 @@ public class LayananAkademikSIAKAD07 {
                 case 1:
                     System.out.print("NIM  : ");
                     String nim = sc.nextLine();
-
                     System.out.print("Nama : ");
                     String nama = sc.nextLine();
-
                     System.out.print("Prodi: ");
                     String prodi = sc.nextLine();
-
                     System.out.print("Kelas: ");
                     String kelas = sc.nextLine();
-
                     Mahasiswa07 mhs = new Mahasiswa07(nim, nama, prodi, kelas);
                     antrian.tambahAntrian(mhs);
                     break;
                 case 2:
                     Mahasiswa07 dilayani = antrian.layaniMahasiswa();
-
                     if (dilayani != null) {
-                        System.out.println("Melayani mahasiswa:");
+                        System.out.print("Melayani mahasiswa: ");
                         dilayani.tampilkanData();
                     }
                     break;
@@ -55,8 +48,10 @@ public class LayananAkademikSIAKAD07 {
                     antrian.tampilkanSemua();
                     break;
                 case 5:
-                    System.out.println("Jumlah mahasiswa dalam antrian: "
-                            + antrian.getJumlahAntrian());
+                    System.out.println("Jumlah dalam antrian: " + antrian.getJumlahAntrian());
+                    break;
+                case 6:
+                    antrian.lihatAkhir();
                     break;
                 case 0:
                     System.out.println("Terima kasih.");
@@ -65,6 +60,5 @@ public class LayananAkademikSIAKAD07 {
                     System.out.println("Pilihan tidak valid.");
             }
         } while (pilihan != 0);
-        sc.close();
     }
 }
