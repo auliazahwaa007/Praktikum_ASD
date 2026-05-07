@@ -15,7 +15,7 @@ public class QueueMain07 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Masukkan kapasitas queue: ");
+        System.out.print("Masukkan kapasitas queue: ");
         int n = sc.nextInt();
 
         Queue07 Q = new Queue07(n);
