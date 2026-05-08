@@ -1,7 +1,5 @@
 package Pertemuan12;
-
 import java.util.Scanner;
-
 public class SLLMain07 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -29,8 +27,17 @@ public class SLLMain07 {
         }
         System.out.println();
         sll.print();
-    }
 
+        System.out.println("data index 1 : ");
+        sll.getData(1);
+        System.out.println("data mahasiswa an Bimon berada pada index: " + sll.indexOf("Bimon"));
+        System.out.println();
+        sll.removeFirst();
+        sll.removeLast();
+        sll.print();
+        sll.removeAt(0);
+        sll.print();
+    }
 }
         // Mahasiswa07 mhs1 = new Mahasiswa07("21212200", "Alvaro", "1A", 4.0);
         // Mahasiswa07 mhs2 = new Mahasiswa07("23212201", "Bimon", "2B", 3.8);
