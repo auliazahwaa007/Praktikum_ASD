@@ -1,5 +1,4 @@
 package TugasJobsheet12;
-
 import java.util.Scanner;
 
 public class MainQueue07 {
@@ -59,6 +58,5 @@ public class MainQueue07 {
                     System.out.println("Menu tidak tersedia");
             }
         } while (pilih != 0);
-        sc.close();
     }
 }
